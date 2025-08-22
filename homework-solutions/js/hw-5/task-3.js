@@ -6,5 +6,18 @@
 const word = 'hello';
 
 let vowelsAndConsonantsResult = '';
+let vowelsCount = 0;
+let consonantCount = 0;
 
-export { vowelsAndConsonantsResult };
+for (let i = 0; i < word.length; i++) {
+  let letter = word[i];
+  if (letter === 'a' || letter === 'e' || letter === 'i' || letter === 'o' || letter === 'u') {
+    vowelsCount++;
+  } else {
+    consonantCount++;
+  }
+}
+vowelsAndConsonantsResult = `word ${word} contains ${vowelsCount} vowels and ${consonantCount} consonatns`;
+console.log(vowelsAndConsonantsResult);
+
+// export { vowelsAndConsonantsResult };
