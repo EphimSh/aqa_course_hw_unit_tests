@@ -45,7 +45,7 @@ let replaceSpacesWithOneResult = '';
 for(let i = 0; i < text.length; i++){
     replaceSpacesWithOneResult += text[i] === ' ' ? "1" : text[i]; 
 };
-console.log(replaceSpacesWithOneResult);
+// console.log(replaceSpacesWithOneResult);
 // replaceSpacesWithOneResult = text.replaceAll(' ', "1"); 
 // console.log(replaceSpacesWithOneResult);
 
