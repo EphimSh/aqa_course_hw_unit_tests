@@ -21,3 +21,4 @@ vowelsAndConsonantsResult = `word ${word} contains ${vowelsCount} vowels and ${c
 console.log(vowelsAndConsonantsResult);
 
 // export { vowelsAndConsonantsResult };
+q;
