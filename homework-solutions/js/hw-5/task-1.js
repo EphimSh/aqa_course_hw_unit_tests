@@ -49,4 +49,4 @@ for(let i = 0; i < text.length; i++){
 // replaceSpacesWithOneResult = text.replaceAll(' ', "1"); 
 // console.log(replaceSpacesWithOneResult);
 
-// export { evenNumbersResult, smilePatternResult, replaceSpacesWithOneResult };
+export { evenNumbersResult, smilePatternResult, replaceSpacesWithOneResult };
