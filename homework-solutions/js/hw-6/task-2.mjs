@@ -32,13 +32,7 @@ for (let myPizza of [...myPizzasT1, ...myPizzasT2]) {
     resultUnique.push(myPizza);
   }
 }
-for (let i = 0; i <= competitorPizzas.length; i++) {
-  if (tempArr[i] === competitorPizzas[i]) {
-    resultNull = null;
-  }
+if (resultUnique.length > 0) {
+  resultNull = null;
 }
-
-console.log(resultUnique);
-console.log(resultNull);
-
 export { resultNull, resultUnique };
