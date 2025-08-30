@@ -4,7 +4,16 @@
 */
 
 function isPalindrom(word) {
-  // Ваш код
+  if (typeof word !== 'string') return false;
+  const str = word.toLowerCase();
+  let i = 0;
+  let j = str.length - 1;
+  while (i < j) {
+    if (str[i] !== str[j]) return false;
+    i++;
+    j--;
+  }
+  return true;
 }
 
 /*
@@ -15,7 +24,20 @@ function isPalindrom(word) {
 */
 
 function findLongestWords(sentence) {
-  // Ваш код
-}
+  if (typeof sentence !== 'string') return [];
+  let words = sentence.toLowerCase().trim().split(/\s+/);
+  let maxLen = words[0].length;
+  let result = [];
+  for (let i = 1; i <= words.=length - 1; i++) {
+    if (maxLen < words[i].length) {
+      result.push(words[i]);
+    } else if (words[i].length === maxLen) {
+    } else {
+      continue;
+    }
+  }
 
+  return result;
+}
+console.log(findLongestWords('The quick rown fox jumps'));
 export { isPalindrom, findLongestWords };
