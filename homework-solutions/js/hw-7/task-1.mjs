@@ -22,7 +22,7 @@ function mergeArrays(...arrs) {
 function devideBy(sentence) {
   return sentence.replaceAll(' ', '_');
 }
-console.log(devideBy('I am super engineer'));
+
 /*
   3. Фибоначчи
     - Напишите функцию fibonacci(n), возвращающую энное число Фибоначчи
