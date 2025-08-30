@@ -20,7 +20,25 @@ function mergeArrays(...arrs) {
     - Пример: I am super engineer => i_Am_Super_Engineer
   */
 function devideBy(sentence) {
-  return sentence.replaceAll(' ', '_');
+  let result = '';
+  let words = sentence.toLowerCase().trim().split(/\s+/);
+  let word = '';
+  if (sentence == '') {
+    return result;
+  } else if (words.length < 2) {
+    result += words;
+    return result;
+  }
+  for (let i = 0; i < words.length; i++) {
+    if (i === 0) {
+      result += words[i];
+    } else {
+      word = String(words[i].charAt(0).toUpperCase() + String(words[i].slice(1)));
+      result += `_${word}`;
+    }
+  }
+
+  return result;
 }
 console.log(devideBy('I am super engineer'));
 /*
@@ -32,9 +50,19 @@ console.log(devideBy('I am super engineer'));
     - Например fibonacci(8) //21
   */
 function fibonacci(n) {
-  if (n < 2) {
-    return n;
+  let result;
+  if (typeof n !== 'number' || !Number.isFinite(n) || !Number.isInteger(n) || n < 0) {
+    throw new Error('n must be an integer >= 0');
   }
-  return fibonacci(n - 1) + fibonacci(n - 2);
+  if (n < 2) return n;
+  let last = 0;
+  let curr = 1;
+  for (let i = 2; i <= n; i++) {
+    result = last + curr;
+    last = curr;
+    curr = result;
+  }
+  return result;
 }
+// console.log(fibonacci(5));
 export { mergeArrays, fibonacci, devideBy };
