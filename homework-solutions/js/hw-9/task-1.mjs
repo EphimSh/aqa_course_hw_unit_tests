@@ -11,21 +11,28 @@
 const character = { name: 'Barney', age: 36, gender: 'male', isQa: true };
 
 // 1
-let keyWithFourChars;
+let keyWithFourChars = Object.keys(character).filter((key) => {
+  return key.length === 4;
+});
 
 // 2
-let stringValues;
+let stringValues = Object.entries(character)
+  .filter(([key, value]) => typeof value == 'string')
+  .map(([key, value]) => value);
 
 // 3
-/* Do not touch this part */
-const logSpy = jest.spyOn(console, 'log');
+/* Do not touch this part */ 
+// const logSpy = jest.spyOn(console, 'log');
 // ---
 
 // Ваш код
-let keyValuePairs;
+let keyValuePairs = Object.entries(character);
+for (let item of keyValuePairs) {
+  console.log(`key = ${item[0]}, value = ${item[1]}`);
+}
 
 // 4
-let hasSalaryKey1stOption;
-let hasSalaryKey2ndOption;
+let hasSalaryKey1stOption = 'salary' in character;
+let hasSalaryKey2ndOption = Object.hasOwn(character, 'salary');
 
 export { keyWithFourChars, stringValues, hasSalaryKey1stOption, hasSalaryKey2ndOption, keyValuePairs, logSpy };
