@@ -5,7 +5,7 @@
   Массив должен быть отсортирован по возрастанию количества гласных букв в слове.
  */
 
-const words = [
+const wordsArr = [
   'umbrella',
   'apple',
   'ocean',
@@ -19,7 +19,14 @@ const words = [
 ];
 
 function sortedByVowels(wordsArr) {
-  // Ваш код
+  if (!Array.isArray(wordsArr)) return [];
+  return wordsArr
+    .map((item, index) => {
+      const vowelsCount = item.match(/[aeiou]/gi);
+      return [item, vowelsCount ? vowelsCount.length : 0, index];
+    })
+    .sort((a, b) => a[1] - b[1] || a[2] - b[2])
+    .map((item) => item[0]);
 }
 
 export { sortedByVowels };
