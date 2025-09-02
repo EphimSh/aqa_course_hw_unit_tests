@@ -25,19 +25,23 @@ function isPalindrom(word) {
 
 function findLongestWords(sentence) {
   if (typeof sentence !== 'string') return [];
+
   let words = sentence.toLowerCase().trim().split(/\s+/);
-  let maxLen = words[0].length;
-  let result = [];
-  for (let i = 1; i <= words.=length - 1; i++) {
-    if (maxLen < words[i].length) {
-      result.push(words[i]);
-    } else if (words[i].length === maxLen) {
-    } else {
-      continue;
+  if (words.length === 1 && words[0] === '') return [];
+
+  let longest = words[0];
+  let result = [longest];
+
+  for (let i = 1; i < words.length; i++) {
+    if (words[i].length > longest.length) {
+      longest = words[i];
+      result = [longest];
+    } else if (words[i].length === longest.length) {
+      result[result.length] = words[i];
     }
   }
 
   return result;
 }
-console.log(findLongestWords('The quick rown fox jumps'));
+
 export { isPalindrom, findLongestWords };
