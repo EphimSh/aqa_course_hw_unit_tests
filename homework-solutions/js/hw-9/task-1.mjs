@@ -21,7 +21,7 @@ let stringValues = Object.entries(character)
   .map(([key, value]) => value);
 
 // 3
-/* Do not touch this part */ 
+/* Do not touch this part */
 // const logSpy = jest.spyOn(console, 'log');
 // ---
 
