@@ -17,7 +17,7 @@ for (let i = 0; i < word.length; i++) {
     consonantCount++;
   }
 }
-vowelsAndConsonantsResult = `word ${word} contains ${vowelsCount} vowels and ${consonantCount} consonatns`;
+vowelsAndConsonantsResult = `${word} contains ${vowelsCount} vowels and ${consonantCount} consonants`;
 console.log(vowelsAndConsonantsResult);
 
 export { vowelsAndConsonantsResult };
