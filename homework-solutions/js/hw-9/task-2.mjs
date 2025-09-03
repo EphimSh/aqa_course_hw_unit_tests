@@ -30,6 +30,7 @@ function getCharactersByAge(minAge) {
 }
 
 function updateCharacter(name, newCharacter) {
+  if (typeof newCharacter !== 'object') return new Error('');
   const character = characters.find((obj) => obj.name === name);
   if (!character) throw new Error('');
   character.name = newCharacter.name;
@@ -38,11 +39,8 @@ function updateCharacter(name, newCharacter) {
 }
 
 function removeCharacter(name) {
-  const len = characters.length;
-  const tempArr = characters.filter((obj) => obj.name !== name);
-  if (tempArr.length === len) throw new Error('');
-  characters.length = 0;
-  characters.push(...tempArr);
+  const index = characters.findIndex((obj) => obj.name === name);
+  if (index === -1) throw new Error('');
+  characters.splice(index, 1);
 }
-
 export { characters, addCharacter, updateCharacter, getCharacter, getCharactersByAge, removeCharacter };
