@@ -42,4 +42,5 @@ for (let i = 0; i < text.length; i++) {
   replaceSpacesWithOneResult += text[i] === ' ' ? '1' : text[i];
 }
 
+
 export { evenNumbersResult, smilePatternResult, replaceSpacesWithOneResult };
