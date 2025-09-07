@@ -57,7 +57,7 @@ empArr.forEach((obj) =>
 );
 
 class Company {
-  #employees = [];
+  #employees;
   constructor(title, phone, address, employees) {
     this.title = title;
     this.phone = phone;
