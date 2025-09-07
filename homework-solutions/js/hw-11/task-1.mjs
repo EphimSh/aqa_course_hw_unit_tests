@@ -42,19 +42,19 @@ class Employee {
   }
 }
 
-const emp1 = new Employee('Darina', 'Volkova', 'L3 Engineer', 1800);
-const emp2 = new Employee('Vasilisa', 'Volkova', 'L2 Engineer', 1200);
-const emp3 = new Employee('Galina', 'Pupkova', 'L1 Engineer', 800);
-const empArr = [emp1, emp2, emp3];
+// const emp1 = new Employee('Darina', 'Volkova', 'L3 Engineer', 1800);
+// const emp2 = new Employee('Vasilisa', 'Volkova', 'L2 Engineer', 1200);
+// const emp3 = new Employee('Galina', 'Pupkova', 'L1 Engineer', 800);
+// const empArr = [emp1, emp2, emp3];
 
-empArr.forEach((obj) => {
-  obj.profession = 'QA Engineer';
-  obj.salary = 3000;
-});
+// empArr.forEach((obj) => {
+//   obj.profession = 'QA Engineer';
+//   obj.salary = 3000;
+// });
 
-empArr.forEach((obj) =>
-  console.log(`Fullname: ${obj._firstName} ${obj._lastName}\nProfession: ${obj._profession}\nSalary: ${obj.salary}\n`),
-);
+// empArr.forEach((obj) =>
+//   console.log(`Fullname: ${obj._firstName} ${obj._lastName}\nProfession: ${obj._profession}\nSalary: ${obj.salary}\n`),
+// );
 
 class Company {
   #employees;
