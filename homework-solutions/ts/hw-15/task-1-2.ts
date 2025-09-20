@@ -4,8 +4,8 @@ interface IVehicle {
 }
 
 abstract class Vehicle implements IVehicle {
-  public make: string;
-  public model: string;
+  protected make: string;
+  protected model: string;
   constructor(make: string, model: string) {
     this.make = make;
     this.model = model;
@@ -17,7 +17,7 @@ abstract class Vehicle implements IVehicle {
 }
 
 class Car extends Vehicle {
-  public year: number;
+  protected year: number;
   constructor(make: string, model: string, year: number) {
     super(make, model);
     this.year = year;
