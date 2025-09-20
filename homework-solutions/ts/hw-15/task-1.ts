@@ -12,10 +12,7 @@ type EmployeeKeys = keyof IEmployee;
 type QAKeys = keyof typeof QA;
 type UserType = typeof QA;
 type PartialPropsEmployee = Partial<IEmployee>;
-type NameNSalary = {
-  name: IEmployee['name'];
-  salary: IEmployee['salary'];
-};
+type PickNameAndSalary = Pick<IEmployee, 'name' | 'salary'>;
 type IsNotManager = Omit<IEmployee, 'isManager'>;
 type ReadOnlyPropsEmployee = Readonly<IEmployee>;
 
